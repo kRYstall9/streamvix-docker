@@ -59,7 +59,7 @@ jobs:
         id: docker_metadata
         uses: docker/metadata-action@v5
         with:
-          images: kRYstall9/streamvix
+          images: krystall0/streamvix
           tags: |
             type=raw,value=${{ steps.get_release.outputs.LATEST_RELEASE }}
             type=raw,value=latest
