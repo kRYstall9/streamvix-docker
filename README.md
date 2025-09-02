@@ -14,7 +14,8 @@ services:
     ports:
       - "7860:7860"
     environment:
-      - BOTHLINK=true
+      - FAST_DYNAMIC=0 # Set FAST_DYNAMIC=1 to bypass extractor and use direct URLs from dynamic_channels.json
+      - DYNAMIC_EXTRACTOR_CONC=10 # Concurrency for extractor resolution of dynamic events (1-50). Also used as CAP of dynamic links processed.
       - MFP_URL= # your mediaflow proxy instance url or http://container-name:port
       - MFP_PSW= # The password of your mediaflow proxy instance
       - TMDB_API_KEY= #https://www.themoviedb.org/settings/api
